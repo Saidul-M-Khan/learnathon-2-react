@@ -2,25 +2,25 @@ import { useState } from "react";
 import { handleDetailsModal } from "../ProductDetails/modal";
 
 interface ProductTypes {
-  products: object;
-  product: object;
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  images: string;
+  products?: any;
+  product?: any;
+  id?: number;
+  title?: string;
+  description?: string;
+  price?: number;
+  discountPercentage?: number;
+  rating?: number;
+  stock?: number;
+  brand?: string;
+  category?: string;
+  thumbnail?: string;
+  images?: string;
 }
 
 const ProductList = ({ products }: ProductTypes) => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = products.filter((product: ProductTypes) => {
+  const filteredProducts = products.filter((product:any) => {
     return product.title.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
