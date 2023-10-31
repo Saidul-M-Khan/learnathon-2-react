@@ -13,7 +13,7 @@ interface ProductTypes {
 
 
 export const handleDetailsModal = (product: ProductTypes) => {
-  const detailsBtn = <HTMLInputElement>document.getElementById("details_modal");
+  const detailsBtn:any = document.getElementById("details_modal");
   detailsBtn.showModal();
 
   const name = <HTMLInputElement>document.getElementById("productTitle");
